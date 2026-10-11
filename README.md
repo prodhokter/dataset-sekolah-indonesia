@@ -54,17 +54,17 @@ curl -O https://raw.githubusercontent.com/prodhokter/dataset-sekolah-indonesia/m
 
 ### 2. Lewat API publik (sudah bersih dan terindeks pencarian)
 
-Base URL: `https://datasets.snbtku.com` (hostname kedua: `https://api.ibnuhabib.web.id`)
+Base URL publik: `https://api.ibnuhabib.web.id`. Hostname internal untuk aplikasi SNBTKU (layanan sama): `https://datasets.snbtku.com`.
 
 ```bash
 # Cari sekolah (q minimal 3 karakter, pencarian mengandung, tidak peka huruf besar-kecil)
-curl "https://datasets.snbtku.com/api/v1/schools/search?q=SURADE&limit=5"
+curl "https://api.ibnuhabib.web.id/api/v1/schools/search?q=SURADE&limit=5"
 
 # Filter jenjang SMA saja
-curl "https://datasets.snbtku.com/api/v1/schools/search?q=SMA%20NEGERI%201&type=SMA&limit=5"
+curl "https://api.ibnuhabib.web.id/api/v1/schools/search?q=SMA%20NEGERI%201&type=SMA&limit=5"
 
 # Detail satu sekolah lewat NPSN
-curl "https://datasets.snbtku.com/api/v1/schools/20253979"
+curl "https://api.ibnuhabib.web.id/api/v1/schools/20253979"
 ```
 
 Contoh respons nyata:
